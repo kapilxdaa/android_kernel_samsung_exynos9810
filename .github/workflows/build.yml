@@ -1,4 +1,4 @@
-name: Build Kernel Note 9
+name: Build Kernel S9+
 
 on:
   workflow_dispatch:
