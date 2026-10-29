@@ -52,7 +52,7 @@ jobs:
           export CC=clang
           export KCFLAGS="-Wno-error -Wno-missing-braces"
 
-          make O=out ARCH=arm64 CC=clang CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android- CROSS_COMPILE_ARM32=arm-linux-androideabi- exynos9810-crownlte_defconfig
+          make O=out ARCH=arm64 CC=clang CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android- CROSS_COMPILE_ARM32=arm-linux-androideabi- exynos9810-star2lte_defconfig
           make -j$(nproc --all) O=out ARCH=arm64 CC=clang CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android- CROSS_COMPILE_ARM32=arm-linux-androideabi- KCFLAGS="-Wno-error -Wno-missing-braces" Image.samsung
 
       - name: Package Artifacts
@@ -68,5 +68,5 @@ jobs:
       - name: Upload Kernel Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Crownlte-KernelSU-Kernel
+          name: Star2lte-KernelSU-Kernel
           path: artifact/
